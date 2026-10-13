@@ -1,9 +1,11 @@
 """Download the arxiv-sage corpus (20 transformer papers) from arXiv.
 
 Uses only the Python standard library so it runs before the project env exists.
-For each paper it (1) queries the arXiv API to confirm the ID maps to the
-expected title, (2) downloads the PDF, (3) verifies it is a real PDF, and
-(4) writes a manifest. Be polite: ~3s between papers (arXiv's requested rate).
+For each paper it 
+(1) queries the arXiv API to confirm the ID maps to the expected title
+(2) downloads the PDF
+(3) verifies it is a real PDF, and
+(4) writes a manifest
 
 Run:  python3 scripts/fetch_papers.py
 """
