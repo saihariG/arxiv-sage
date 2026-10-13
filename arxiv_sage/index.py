@@ -2,6 +2,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 
 from arxiv_sage.corpus import build_documents
+from arxiv_sage.embeddings import get_embeddings
 
 
 def build_index(
@@ -14,10 +15,7 @@ def build_index(
     documents = build_documents()
 
     # Loading the embedding model
-    embeddings = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-MiniLM-L6-v2",
-        encode_kwargs={"normalize_embeddings": True},
-    )
+    embeddings = get_embeddings()
 
     # Create and persist the vector store
     vectorstore = Chroma.from_documents(
