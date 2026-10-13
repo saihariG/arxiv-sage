@@ -218,3 +218,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- arxiv-sage project ---
+data/papers/
+data/papers_manifest.json
+chroma/
+.env
+.venv/
+*.sqlite3

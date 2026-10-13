@@ -1,0 +1,23 @@
+[project]
+name = "arxiv-sage"
+version = "0.1.0"
+description = "Agentic RAG system for Q&A over arXiv transformer papers"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    # --- M1: naive dense RAG (ingest -> chunk -> embed -> retrieve -> answer) ---
+    "langchain>=0.3",
+    "langchain-community>=0.3",       # document loaders
+    "langchain-text-splitters>=0.3",  # chunking
+    "langchain-huggingface>=0.1",     # local embeddings wrapper
+    "langchain-chroma>=0.1",          # vector store wrapper
+    "langchain-google-genai>=2.0",    # Gemini LLM
+    "sentence-transformers>=3.0",     # all-MiniLM-L6-v2 (brings torch)
+    "chromadb>=0.5",
+    "pymupdf>=1.24",                  # robust PDF text extraction
+    "python-dotenv>=1.0",
+    # Later milestones will add: langgraph (M3), ragas (M4),
+    # rank-bm25 + reranker deps (M2), chainlit (M5).
+]
+
+[tool.uv]
+package = false  # this is an application, not an installable library
