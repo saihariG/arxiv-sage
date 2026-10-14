@@ -1,6 +1,6 @@
 # RESULTS
 
-Every number in this file comes from a run we actually executed. No estimates, no placeholders.
+Every number in this file comes from a run that is actually executed.
 
 ## M1 — Naive dense RAG baseline
 _Status: complete (2026-10-14)._
